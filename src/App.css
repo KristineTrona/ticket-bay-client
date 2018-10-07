@@ -1,0 +1,801 @@
+.App{
+  font-family: 'PT Sans Caption', sans-serif;
+  background-image: url("https://cdn.dribbble.com/users/464874/screenshots/3278838/music-pattern_1x.png");
+}
+
+/*Style header*/
+
+.header{
+ max-height: 10vh;
+ width: 100%;
+ background-color: #002d56;
+ color: white;
+ display: grid;
+ align-content: center;
+ align-items: center;
+ grid-template-columns: 30% 30% 40%;
+ padding-left: 15px;
+ border-bottom: 1px white solid;
+}
+
+.header-with-user{
+  height : 60px;
+  background-color: #002d56;
+  color: white;
+  display: grid;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 30% 50% 20%;
+  padding-left: 15px;
+  border-bottom: 1px white solid;
+}
+
+.link-to-home{
+  min-width: 124px;
+  font-size: 24px;
+  justify-self: left;
+  padding-left: 20px;
+}
+
+@media (max-width: 800px){
+  .login-signup-buttons{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+}
+
+@media (min-width: 800px){
+  .login-signup-buttons{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    align-items: center;
+  }
+}
+
+.login-button{
+  width: 70px;
+  height: 30px;
+  margin: 5px;
+  border: none;
+  color: white;
+  background-color:  #002d56;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  display: inline-block;
+  justify-self: right;
+}
+
+.signup-button{
+  width: 84px;
+  height: 30px;
+  color: white;
+  border: none;
+  background-color:  #002d56;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  display: inline-block;
+  justify-self: right;
+  margin-right: 30px;
+}
+
+.logout-button{
+  width: 84px;
+  height: 30px;
+  border: none;
+  color: white;
+  background-color:  #002d56;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  margin-right: 20px;
+}
+
+.account{
+  justify-self: right;
+  padding-right: 20px;
+}
+
+.account-name{
+  position: relative;
+  bottom: 8%;
+}
+
+.account-icon{
+  max-height: 30px;
+  max-width: 30px;
+  padding-right: 2px;
+}
+
+/* Style the Events page*/
+
+@media (max-width: 700px){
+  .events-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    margin-left:auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .event-div{
+    border: black solid 1px;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10%;
+  }
+
+  .event-div img{
+    position: relative;
+    height: 200px;
+    max-width: 200px;
+  }
+  
+  .add-new-event{
+    display: block;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  .events-page h1{
+    color: white;
+    text-align: center;
+    border: 1px white solid;
+    background-color: #002d56;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+}
+
+@media (min-width: 700px){
+  .events-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1%;
+    position: relative;
+    margin-left: auto;
+    margin-right:auto;
+    width: 80%;
+  }
+
+  .event-div{
+    border: black solid 1px;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border-radius: 10%;
+  }
+
+  .event-div img{
+    position: relative;
+    height: 120px;
+    max-width: 120px;
+  }
+
+  .events-page-top{
+    display: grid;
+    grid-template-columns: 24% 52% 24%;
+  }
+  
+  .add-new-event{
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+
+  .events-page h1{
+    color: white;
+    text-align: center;
+    border: 1px white solid;
+    background-color: #002d56;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+}
+
+/*Style login page*/
+
+  .login-page{
+    height: 90vh;
+  }
+
+  .login-wrapper h1{
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  .login-wrapper{
+    background-color:white;
+    width: 60%;
+    min-width: 200px;
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    padding: 20px;
+    border: 2px solid #C34E59;
+  }
+
+  .login-form{
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .login-form div{
+    margin-bottom: 20px;
+  }
+
+  .login-form input{
+    width: 180px;
+    height: 35px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #C34E59;
+  }
+
+  .submit-login{
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* Style the sign-up page*/
+
+.sign-up-page{
+  height: 90vh;
+}
+
+.sign-up-wrapper h1{
+  text-align: center;
+  margin-top: 0px;
+}
+
+.sign-up-wrapper{
+  background-color:white;
+  width: 60%;
+  min-width: 200px;
+  max-width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  padding: 20px;
+  border: 2px solid #C34E59;
+}
+
+.sign-up-form{
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.sign-up-form div{
+  margin-bottom: 20px;
+}
+
+.sign-up-form input{
+  width: 180px;
+  height: 35px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid #C34E59;
+}
+
+.sign-up-submit{
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/*Style the new event form page*/
+
+.create-event-page{
+  height: 90vh;
+}
+
+.create-event-page h1{
+    color: white;
+    text-align: center;
+    border: 1px white solid;
+    background-color: #002d56;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 5px;
+}
+
+.create-event-form{
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  width: 70%;
+  max-width: 500px;
+  padding: 20px;
+  border: 2px solid #C34E59;
+}
+
+
+.create-event-form div{
+  margin-bottom: 10px;
+  display: block;
+  text-align: right;
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+
+.create-event-form label{
+  padding-right: 10px;
+}
+
+.create-event-form input{
+  width: 150px;
+  height: 25px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #C34E59;
+}
+
+.submit-new-event{
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.back-to-events, .tickets-to-events, .back-to-tickets{
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 5%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+/* Style the Event Details page */
+
+.event-tickets-page{
+  height: 93vh;
+}
+
+.event-tickets-page h1, h3{
+  text-align: center;
+}
+
+
+.tickets-to-events{
+  margin-top: 10px;
+}
+
+.event-description{
+  color: white;
+  text-align: center;
+  border: 1px white solid;
+  background-color: #002d56;
+  width: 350px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  margin-top:20px;
+  padding: 10px;
+}
+
+.event-description h1{
+  color: white;
+  text-align: center;
+  background-color: inherit;
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+}
+
+.risk-level-legend{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+  background: white;
+  border: 2px solid #C34E59;
+  width: 400px;
+}
+
+.risk-level{
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: #a09b9b solid 1px;
+}
+
+.ticket-list-wrapper{
+  text-align: center;
+  border: 1px white solid;
+  background-color: white;
+  width: 90%;
+  max-width: 800px;
+  border: 2px solid #C34E59;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 5px;
+}
+
+.event-details-headers{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+
+.tickets-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  margin-bottom: 10px;
+  min-height: 50px;
+}
+
+#username-ticket, #price-ticket{
+  padding-top: 10%;
+}
+
+.add-new-ticket{
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 5%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Style the Ticket Details page*/
+
+.ticket-details-conteiner-page{
+  min-height: 90vh;
+  padding-bottom: 30px;
+}
+
+.buttons-wrapper-tickets{
+  display: grid;
+  grid-template-columns: 170px 170px;
+  margin-bottom: 30px;
+}
+
+.edit-ticket-button{
+  background-color: #f4a22e;
+  border: none;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 5%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.ticket-details-content h1{
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.ticket-details-content, .add-comment-wrapper{
+  background-color: white;
+  width: 80%;
+  max-width: 800px;
+  padding: 20px;
+  padding-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ticket-info-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #C34E59
+}
+
+.ticket-description{
+  padding-top: 10px;
+}
+
+.ticket-info-wrapper img{
+  width: 200px;
+  height: 200px;
+}
+
+.buy-ticket-button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 5%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Style comments section*/
+
+.comment{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+  grid-column-gap: 20px;
+  padding: 20px;
+  background-color: #ffeed6;
+  border: 1px solid #7c7b75;
+}
+
+.comments-wrapper{
+  padding-bottom: 30px;
+}
+
+.add-new-comment{
+  padding-left: 20px;
+  font-weight: bold;
+  display: block;
+}
+
+.new-comment-text-button{
+  display: flex;
+}
+
+#create-comment textarea{
+  margin-left: 20px;
+  padding: 5px;
+  width: 291px;
+  height: 100px;
+  padding: 12px 20px;
+  margin: 15px 15px;
+  box-sizing: border-box;
+  border: 2px solid #C34E59;
+}
+
+.submit-new-comment{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 7px 15px;
+  height: 35px;
+  border-radius: 5%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  margin-top: 80px;
+  float: right;
+}
+
+/*Style thank you page*/
+.thank-you-page{
+  height: 90vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.thank-you-content{
+  background-color:white;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  padding: 20px;
+  border: 2px solid #C34E59;
+}
+
+.thank-you-to-events{
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 7px 15px;
+  border-radius: 5%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style add new ticket form*/
+
+.create-ticket-page{
+  height: 90vh;
+}
+
+.add-new-ticket-wrapper{
+  background-color:white;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  padding: 20px;
+  border: 2px solid #C34E59;
+}
+
+.add-new-ticket-wrapper h1{
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.create-ticket-form{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+  font-size: 18px;
+  width: 70%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.new-ticket-input{
+  margin-bottom: 10px;
+}
+
+.create-ticket-form label{
+  padding-right: 10px;
+}
+
+.create-ticket-form input{
+  width: 150px;
+  height: 25px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #C34E59;
+}
+
+.submit-new-ticket{
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+/* Style edit ticket form */
+
+.update-ticket-page h2{
+  margin-bottom: 0px;
+}
+
+.update-ticket-form{
+  text-align: left;
+  padding: 10px;
+}
+
+.edit-ticket-input{
+  margin-bottom: 10px;
+}
+
+.edit-ticket-input label{
+  padding-right: 10px;
+}
+
+.edit-ticket-input input{
+  width: 150px;
+  height: 25px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #C34E59;
+}
+
+.submit-ticket-edit{
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
