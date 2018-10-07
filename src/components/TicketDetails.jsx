@@ -34,11 +34,11 @@ export const calculateRisk = (eventTickets, selectedTicket, allEvents) => {
   let averagePrice = arrayOfPrices.reduce((acc, curr) => acc+curr)/arrayOfPrices.length
 
   if (selectedTicket.price < averagePrice){
-    risk = risk + (averagePrice-selectedTicket.price)
+    risk = risk + ((averagePrice-selectedTicket.price)/averagePrice)
   }
 
   if (selectedTicket.price > averagePrice){
-    risk = risk - (selectedTicket.price- averagePrice)
+    risk = risk - ((selectedTicket.price- averagePrice)/averagePrice)
   }
   //Checking if ticket was added during office hours or not:
   let ticketDate= new Date(selectedTicket.createdAt)
