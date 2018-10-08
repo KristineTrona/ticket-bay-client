@@ -9,13 +9,13 @@ export const riskRangeCheck = (risk) => {
     return <span style={{color: "red"}}>{95}%</span>
   }else{
     if(risk > 5 && risk <= 25){
-      return <span style={{color: "green"}}>{risk.toFixed(2)}%</span>
+      return <span style={{color: "green"}}>{risk.toFixed(0)}%</span>
     }
     else if (risk > 25 && risk <= 50){
-      return <span style={{color: "#f4a742"}}>{risk.toFixed(2)}%</span>
+      return <span style={{color: "#f4a742"}}>{risk.toFixed(0)}%</span>
     }
     else{
-      return <span style={{color: "#e54b4b"}}>{risk.toFixed(2)}%</span>
+      return <span style={{color: "#e54b4b"}}>{risk.toFixed(0)}%</span>
     }
   }
 }
