@@ -68,8 +68,11 @@ export default function ticketDetails(props){
 	  	<div className = "ticket-details-page">
         <div className="buttons-wrapper-tickets">
           <Link style={{textDecoration: "none"}} to={`/events/${props.eventId}`}><button className="back-to-tickets">Back to tickets</button></Link>
-          { props.user && props.userId === props.ticket.user.id &&
+          { props.user && props.userId === props.ticket.user.id && props.editMode === false &&
             <button className="edit-ticket-button" onClick={props.onClick}>Edit ticket</button>
+          }
+          { props.user && props.userId === props.ticket.user.id && props.editMode === true &&
+            <button className="edit-ticket-button" onClick={props.onClick}>Close edit mode</button>
           }
         </div>
         <div className="ticket-details-content">
@@ -92,7 +95,7 @@ export default function ticketDetails(props){
             </Link>
             {
               props.editMode===true &&
-              <UpdateTicketForm ticket={props.ticket}/>
+              <UpdateTicketForm ticket={props.ticket} editMode={props.editMode}/>
             }
           <div className="comments-wrapper">
             <h1 style={{textAlign: "left"}}>Comments</h1>

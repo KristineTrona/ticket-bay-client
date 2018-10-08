@@ -6,11 +6,8 @@ import {connect} from 'react-redux'
 
 class UpdateTicketForm extends PureComponent {
 
-  state = {
-
-  }
+  state = {}
   
-
   onChange = (event) => {
     const value = event.target.value
     const name = event.target.name
@@ -20,6 +17,7 @@ class UpdateTicketForm extends PureComponent {
   }
 
   onSubmit = (event) => {
+    event.preventDefault()
     this.props.updateTicket(this.props.ticket.id, this.state)
     event.target.reset()
   }

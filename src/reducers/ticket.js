@@ -1,4 +1,4 @@
-import {LOAD_TICKET_DETAILS, ADD_COMMENT} from '../actions/ticket'
+import {LOAD_TICKET_DETAILS, ADD_COMMENT, EDIT_TICKET} from '../actions/ticket'
 
 const reducer = (state = null, action = {}) => {
   switch(action.type){
@@ -7,6 +7,8 @@ const reducer = (state = null, action = {}) => {
     case ADD_COMMENT:
       return {...state,
         comments:[...state.comments, action.payload]}
+    case EDIT_TICKET:
+      return {...state = action.payload}
     default:
       return state
   }
