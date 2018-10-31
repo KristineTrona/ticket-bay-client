@@ -18,9 +18,17 @@ class EventsPageContainer extends PureComponent {
   }
 	
 	render() {
-		return (
+		if (this.props.events.allEvents.length !== 0){
+			return (
 				<EventsPage events={this.props.events.allEvents} user={this.props.authenticated}/>
-		)
+			)}else{
+				return(
+				<div className="events-page-not-loaded">
+					<div className="not-loaded-text">
+						It can take a few seconds for the site to load - stick around :)
+					</div>
+				</div>
+				)}
 	}
 }
 

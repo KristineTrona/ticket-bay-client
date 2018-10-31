@@ -234,6 +234,22 @@
 
 }
 
+.events-page-not-loaded{
+  min-height: 90vh;
+}
+
+.not-loaded-text{
+  font-size: 30px;
+  text-align: center;
+  background: white;
+  border: 2px solid #C34E59;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 70px;
+  padding: 30px;
+}
+
 /*Style login page*/
 
   .login-page{
