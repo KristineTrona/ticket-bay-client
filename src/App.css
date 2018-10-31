@@ -238,17 +238,39 @@
   min-height: 90vh;
 }
 
-.not-loaded-text{
-  font-size: 30px;
-  text-align: center;
+.loading{
   background: white;
   border: 2px solid #C34E59;
   width: 50%;
   margin-right: auto;
   margin-left: auto;
-  margin-top: 70px;
-  padding: 30px;
+  margin-top: 50px;
+  padding: 30px 20px 20px;
+  height: 30vh;
+  max-width: 500px;
+  line-height: 1.4;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
 }
+
+.loading__anim {
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  border: 5px solid rgba(189,189,189 ,0.25);
+  border-left-color: #002d56;
+  border-top-color: #002d56;
+  border-radius: 50%;
+  margin-top: 20px;
+  animation: rotate 1000ms infinite linear;
+ }
+ 
+ @keyframes rotate {
+  to {
+   transform: rotate(1turn)
+  }
+ }
 
 /*Style login page*/
 

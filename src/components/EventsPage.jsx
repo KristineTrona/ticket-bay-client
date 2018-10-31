@@ -2,6 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 export default function eventsPage(props){
+	if (props.events.length !== 0){
 	return (
 		<div className = "events-page">
 			<div className="events-page-top">
@@ -19,6 +20,14 @@ export default function eventsPage(props){
 					</div>
 				</Link>)}
 			</div>
-		</div>)
+		</div>)} else{
+			return(
+				<div className="events-page-not-loaded">
+					<div class="loading">
+						<p>It can take a few seconds for the site to load - stick around :)</p>
+    				<div class="loading__anim"></div>
+					</div>
+				</div>
+			)}
 } 
 
